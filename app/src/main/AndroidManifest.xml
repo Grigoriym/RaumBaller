@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.kaeruct.raumballer">
+
+    <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS"
+        tools:ignore="HighSamplingRate" />
 
     <application
         android:name="com.kaeruct.raumballer.AndroidGame"
@@ -12,8 +16,7 @@
         <activity
             android:name="jgame.platform.JGActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:exported="true"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
